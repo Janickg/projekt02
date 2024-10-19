@@ -30,6 +30,18 @@ public class Team {
         studentList.remove(name);
     }
 
+    public void removeStudentBenn(String name) {
+        Student studentToRemove = null;
+        for (Student student : studentList) {
+            if (student.getName().equals(name)) {
+                studentToRemove = student;
+            }
+        }
+        if (studentToRemove != null) {
+            studentList.remove(studentToRemove);
+        }
+    }
+
     public ArrayList<Student> getStudentList() {
         return studentList;
     }
